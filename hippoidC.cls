@@ -7,7 +7,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{lastpage}
 \RequirePackage{mathrsfs}
-\RequirePackage{bookOfProof} % Assuming this package is defined elsewhere
+\RequirePackage{hippoidP} % Assuming this package is defined elsewhere
 
 % Define the page styles
 \fancypagestyle{styleTOC}{
