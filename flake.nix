@@ -11,9 +11,11 @@
           (builtins.readFile ./code/hippoidC.cls);
         hippoid-sty = pkgs.writeTextDir "tex/latex/hippoidP.sty"
           (builtins.readFile ./code/hippoidP.sty);
-        hippoid-tex = pkgs.symlinkJoin {
+        hippoid-tex = pkgs.symlinkJoin rec {
           name = "hippoid-tex";
           paths = [ hippoid-sty hippoid-cls ];
+          pname = name;
+          tlType = "run";
         };
       in { packages.hippoid-tex = hippoid-tex; });
 }
