@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{idrisMemo}
+\ProvidesClass{hippoidC}
 \LoadClass[12pt]{article}
 
 \RequirePackage{fancyhdr}
