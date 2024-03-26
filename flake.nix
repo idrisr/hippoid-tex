@@ -18,5 +18,6 @@
       in {
         packages.default = hippoid-tex;
         devShells.default = hippoid-tex;
+        inherit hippoid-tex;
       });
 }
