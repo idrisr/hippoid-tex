@@ -15,9 +15,5 @@
           name = "hippoid-tex";
           paths = [ hippoid-sty hippoid-cls ];
         };
-      in {
-        packages.default = hippoid-tex;
-        devShells.default = hippoid-tex;
-        inherit hippoid-tex;
-      });
+      in { packages.hippoid-tex = hippoid-tex; });
 }
