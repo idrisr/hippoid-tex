@@ -11,6 +11,5 @@ stdenv.mkDerivation rec {
     cp $src/hippoidC.cls $out/tex/latex
     cp $src/hippoidP.sty $out/tex/latex
   '';
-  version = "1.2.3";
   tlType = "run";
 }
