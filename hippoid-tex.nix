@@ -1,6 +1,16 @@
-{ writeTextDir }:
-writeTextDir "tex/latex" builtins.readFile ./code/hippoid.cls
-# mkdir -p $out/tex/latex
-# cp ./code/hippoid.cls $out/tex/latex
-# cp ./code/hippoid.sty $out/tex/latex
-# ''
+{ stdenv }:
+stdenv.mkDerivation rec {
+  src = ./code;
+  name = "hippoid-tex";
+  pname = name;
+  dontUnpack = true;
+  phases = [ "installPhase" ];
+
+  installPhase = ''
+    mkdir -p $out/tex/latex/
+    cp $src/hippoidC.cls $out/tex/latex
+    cp $src/hippoidP.sty $out/tex/latex
+  '';
+  version = "1.2.3";
+  tlType = "run";
+}

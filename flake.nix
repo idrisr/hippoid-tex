@@ -17,5 +17,9 @@
           pname = name;
           tlType = "run";
         };
-      in { packages.hippoid-tex = hippoid-tex; });
+        hippoid-tex2 = pkgs.callPackage ./hippoid-tex.nix { };
+      in {
+        packages.hippoid-tex = hippoid-tex;
+        packages.hippoid-tex2 = hippoid-tex2;
+      });
 }
