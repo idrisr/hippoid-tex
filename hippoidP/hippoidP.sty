@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hippoidP}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tocloft}
+\newcommand{\set}[1]{\{#1\}}
+
+\newenvironment{myexercise}{%
+\begin{exercise}
+}{%
+\end{exercise}
+}
+
+\newcommand{\docsetup}[3]{
+    \fancyfoot{} % Clear all footers
+    \pagestyle{fancy}
+    \fancyfoot[l]{#3}
+    \fancyhead[l]{#1}
+    \fancyhead[r]{#2}
+    \fancyfoot[r]{\thepage/\pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0.2pt}
+    \renewcommand{\footrulewidth}{0.2pt}
+    \setlength{\headheight}{15pt}
+}
