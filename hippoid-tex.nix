@@ -1,5 +1,5 @@
-{ stdenv }:
-stdenv.mkDerivation rec {
+{ stdenvNoCC }:
+stdenvNoCC.mkDerivation rec {
   src = ./hippoidP;
   name = "hippoid-tex";
   pname = name;
