@@ -13,10 +13,11 @@
 
 \newcommand{\set}[1]{\{#1\}}
 
-\newenvironment{myexercise}{%
-\begin{exercise}
+\newenvironment{myexercise}[1][]{%  % Added [] for optional argument
+    \ifthenelse{\equal{#1}{newpage}}{\clearpage}{} % Check if arg is 'newpage'
+    \begin{exercise}
 }{%
-\end{exercise}
+    \end{exercise}
 }
 
 \newcommand{\docsetup}[3]{
