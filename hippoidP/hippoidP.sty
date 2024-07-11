@@ -6,21 +6,25 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{enumitem}
+\usepackage{tcolorbox}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{lastpage}
 \usepackage{tocloft}
 \usepackage{makeidx}
+\usepackage{exercise}
 \makeindex
 \usepackage[hyperindex]{hyperref}
 
 \newcommand{\set}[1]{\{#1\}}
 
-\newenvironment{myexercise}[1][]{%  % Added [] for optional argument
+\newenvironment{myexercise}[1][]{
 	\ifthenelse{\equal{#1}{newpage}}{\clearpage}{} % Check if arg is 'newpage'
-	\begin{exercise}
-		}{%
-	\end{exercise}
+	\begin{tcolorbox}
+		\begin{exercise}
+			}{%
+		\end{exercise}
+	\end{tcolorbox}
 }
 
 \newcommand{\docsetup}[3]{
