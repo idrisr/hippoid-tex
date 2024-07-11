@@ -1,7 +1,7 @@
 {
   description = "Latex package for typesetting math solutions";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/23.11";
+    nixpkgs.url = "github:nixos/nixpkgs/24.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = { nixpkgs, self, flake-utils }:
