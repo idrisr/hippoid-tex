@@ -10,24 +10,27 @@
 \usepackage{graphicx}
 \usepackage{lastpage}
 \usepackage{tocloft}
+\usepackage{makeidx}
+\makeindex
+\usepackage[hyperindex]{hyperref}
 
 \newcommand{\set}[1]{\{#1\}}
 
 \newenvironment{myexercise}[1][]{%  % Added [] for optional argument
-    \ifthenelse{\equal{#1}{newpage}}{\clearpage}{} % Check if arg is 'newpage'
-    \begin{exercise}
-}{%
-    \end{exercise}
+	\ifthenelse{\equal{#1}{newpage}}{\clearpage}{} % Check if arg is 'newpage'
+	\begin{exercise}
+		}{%
+	\end{exercise}
 }
 
 \newcommand{\docsetup}[3]{
-    \fancyfoot{} % Clear all footers
-    \pagestyle{fancy}
-    \fancyfoot[l]{#3}
-    \fancyhead[l]{#1}
-    \fancyhead[r]{#2}
-    \fancyfoot[r]{\thepage/\pageref{LastPage}}
-    \renewcommand{\headrulewidth}{0.2pt}
-    \renewcommand{\footrulewidth}{0.2pt}
-    \setlength{\headheight}{15pt}
+	\fancyfoot{} % Clear all footers
+	\pagestyle{fancy}
+	\fancyfoot[l]{#3}
+	\fancyhead[l]{#1}
+	\fancyhead[r]{#2}
+	\fancyfoot[r]{\thepage/\pageref{LastPage}}
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
+	\setlength{\headheight}{15pt}
 }
