@@ -4,7 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{amsthm}
+% \usepackage{amsthm}
 \usepackage{enumitem}
 \usepackage{exercises}
 \usepackage{fancyhdr}
@@ -19,14 +19,24 @@
 
 \newcommand{\set}[1]{\{#1\}}
 
-\newenvironment{myexercise}[1][]{
-	\ifthenelse{\equal{#1}{newpage}}{\clearpage}{} % Check if arg is 'newpage'
-	\begin{tcolorbox}
-		\begin{exercise}
-			}{%
-		\end{exercise}
-	\end{tcolorbox}
-}
+\newtcolorbox[auto counter,number within=section]{myexercise}[1][]{
+	colback=green!10!white,
+	colframe=black,
+	fonttitle=\bfseries,
+	title=Ex.~\thetcbcounter:}
+
+\newtcolorbox[auto counter,number within=section]{mytheo}[1][]{
+	colback=green!10!white,
+	colframe=black,
+	fonttitle=\bfseries,
+	title=Ex.~\thetcbcounter:}
+
+% \newenvironment{myexercise}[1][]{
+% \ifthenelse{\equal{#1}{newpage}}{\clearpage}{} % Check if arg is 'newpage'
+% \begin{exercise}
+% }{%
+% \end{exercise}
+% }
 
 \newcommand{\docsetup}[3]{
 	\fancyfoot{} % Clear all footers
